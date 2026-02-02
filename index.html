@@ -1,4 +1,4 @@
-[11:21 pm, 02/02/2026] Prabhat singh: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,63 +20,6 @@
   <style>
     body { font-family: 'Poppins', sans-serif; }
     .glow { box-shadow: 0 0 25px rgba(99,102,241,0.6); }
-  </style>
-</head>
-…
-[11:30 pm, 02/02/2026] Prabhat singh: <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prabhat Singh | AI Magic Portfolio</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-    .glow { box-shadow: 0 0 25px rgba(99,102,241,0.6); }
-
-    /* Ripple + Star Effect */
-    .ripple {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background: radial-gradient(circle, rgba(99,102,241,0.8), transparent);
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      animation: rippleAnim 0.8s ease-out forwards;
-      z-index: 9999;
-    }
-
-    .star {
-      position: fixed;
-      color: #818cf8;
-      font-size: 12px;
-      pointer-events: none;
-      animation: starAnim 1s ease-out forwards;
-      z-index: 9999;
-    }
-
-    @keyframes rippleAnim {
-      from { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
-      to { opacity: 0; transform: translate(-50%, -50%) scale(15); }
-    }
-
-    @keyframes starAnim {
-      from { opacity: 1; transform: translate(0, 0) scale(1); }
-      to { opacity: 0; transform: translate(var(--x), var(--y)) scale(0); }
-    }
   </style>
 </head>
 
@@ -100,6 +43,7 @@
 <!-- HERO -->
 <section id="home" class="min-h-screen flex items-center justify-center px-6">
   <div class="grid md:grid-cols-2 gap-10 items-center" data-aos="zoom-in">
+
     <div>
       <h1 class="text-5xl md:text-6xl font-bold mb-4">
         Hi, I'm <span class="text-indigo-400">Prabhat Singh</span>
@@ -122,6 +66,7 @@
       <img src="profile.jpg" alt="Prabhat Singh"
            class="w-72 h-72 object-cover rounded-2xl border-4 border-indigo-500 glow" />
     </div>
+
   </div>
 </section>
 
@@ -140,6 +85,7 @@
 <section id="projects" class="py-20 bg-black/40">
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-indigo-400 mb-10" data-aos="fade-right">Projects</h2>
+
     <div class="grid md:grid-cols-2 gap-8">
       <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-left">
         <h3 class="text-xl font-semibold mb-2">Smart Contact Manager</h3>
@@ -147,6 +93,7 @@
           Java, Spring Boot, MySQL, Docker based full-stack application.
         </p>
       </div>
+
       <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-right">
         <h3 class="text-xl font-semibold mb-2">AI Portfolio Website</h3>
         <p class="text-gray-400 text-sm">
@@ -161,6 +108,7 @@
 <section id="skills" class="py-20 max-w-6xl mx-auto px-6">
   <div data-aos="fade-up">
     <h2 class="text-3xl font-bold text-indigo-400 mb-10">Skills</h2>
+
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-gray-900 p-6 rounded-xl glow">
         <h3 class="text-xl font-semibold mb-3">Backend</h3>
@@ -171,6 +119,7 @@
           <li>✔ Hibernate / JPA</li>
         </ul>
       </div>
+
       <div class="bg-gray-900 p-6 rounded-xl glow">
         <h3 class="text-xl font-semibold mb-3">Database & DevOps</h3>
         <ul class="text-gray-400 space-y-1">
@@ -180,6 +129,7 @@
           <li>✔ AWS (Basics)</li>
         </ul>
       </div>
+
       <div class="bg-gray-900 p-6 rounded-xl glow">
         <h3 class="text-xl font-semibold mb-3">Frontend & AI</h3>
         <ul class="text-gray-400 space-y-1">
@@ -192,15 +142,44 @@
   </div>
 </section>
 
+<!-- AI CHATBOT -->
+<section id="ai" class="py-20 max-w-6xl mx-auto px-6">
+  <div class="bg-gray-900 rounded-2xl p-8 glow" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-4">AI Assistant 🤖</h2>
+
+    <div class="bg-black rounded-xl p-4 h-60 overflow-y-auto mb-4" id="chatBox">
+      <p class="text-green-400">AI: Hi! Ask me about Prabhat's skills, projects, or hiring.</p>
+    </div>
+
+    <div class="flex">
+      <input id="userMsg" type="text" placeholder="Type your message..."
+             class="flex-1 p-3 rounded-l bg-gray-800 text-white outline-none" />
+      <button onclick="chatAI()"
+              class="px-6 bg-indigo-600 rounded-r hover:bg-indigo-700">
+        Send
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="py-20 bg-black/40">
   <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
     <h2 class="text-3xl font-bold text-indigo-400 mb-8">Connect With Me</h2>
-    <p class="text-gray-300">📞 +91 80810 84765</p>
-    <p class="text-gray-300">📧 singh.prabhat1812@gmail.com</p>
+
+    <div class="text-gray-300 text-lg space-y-2">
+      <p>📞 Phone: <span class="text-indigo-400">+91 80810 84765</span></p>
+      <p>📧 Email:
+        <a href="mailto:singh.prabhat1812@gmail.com"
+           class="text-indigo-400 hover:underline">
+          singh.prabhat1812@gmail.com
+        </a>
+      </p>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="py-6 text-center text-gray-500">
   © 2026 Prabhat Singh | Built with ❤️ & AI
 </footer>
@@ -211,6 +190,7 @@
      class="bg-green-500 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
     <i class="fab fa-whatsapp"></i>
   </a>
+
   <a href="mailto:singh.prabhat1812@gmail.com"
      class="bg-red-500 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
     <i class="fas fa-envelope"></i>
@@ -222,31 +202,22 @@
 <script>
   AOS.init();
 
-  // Ripple + Star Effect
-  document.addEventListener("click", (e) => {
-    const ripple = document.createElement("div");
-    ripple.className = "ripple";
-    ripple.style.left = e.clientX + "px";
-    ripple.style.top = e.clientY + "px";
-    document.body.appendChild(ripple);
-    setTimeout(() => ripple.remove(), 800);
+  function chatAI() {
+    const input = document.getElementById("userMsg").value.toLowerCase();
+    const chatBox = document.getElementById("chatBox");
 
-    for (let i = 0; i < 6; i++) {
-      const star = document.createElement("div");
-      star.className = "star";
-      star.innerText = "✦";
-      star.style.left = e.clientX + "px";
-      star.style.top = e.clientY + "px";
-      star.style.setProperty("--x", (Math.random() - 0.5) * 80 + "px");
-      star.style.setProperty("--y", (Math.random() - 0.5) * 80 + "px");
-      document.body.appendChild(star);
-      setTimeout(() => star.remove(), 1000);
-    }
-  });
+    let reply = "🤖 Ask me about skills, projects, or hiring.";
+
+    if (input.includes("project")) reply = "🚀 I build Java & Spring Boot based projects.";
+    else if (input.includes("skill")) reply = "💡 Java, Spring Boot, MySQL, Docker, AI basics.";
+    else if (input.includes("hire")) reply = "🔥 Yes, I'm open to exciting opportunities!";
+
+    chatBox.innerHTML += <p class="text-blue-400">You: ${input}</p>;
+    chatBox.innerHTML += <p class="text-green-400">AI: ${reply}</p>;
+    document.getElementById("userMsg").value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
 </script>
 
 </body>
 </html>
-
-
-

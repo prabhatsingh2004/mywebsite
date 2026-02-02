@@ -1,128 +1,242 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prabhat Singh | AI Magic Portfolio</title>
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
     body {
-      background: #0f172a;
-      color: white;
-      min-height: 100vh;
-      padding: 40px;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
     }
 
-    h1, h2 { color: #818cf8; margin-bottom: 15px; }
-
-    .card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 16px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 0 30px rgba(99,102,241,0.25);
+    .glow {
+      box-shadow: 0 0 25px rgba(99,102,241,0.6);
     }
 
-    .info p {
-      margin: 12px 0;
-      font-size: 16px;
-    }
-
-    .info i {
-      margin-right: 10px;
-      color: #38bdf8;
-    }
-
-    .skills {
-      margin-top: 30px;
-    }
-
-    .skill {
-      background: #020617;
-      border: 1px solid #1e293b;
-      padding: 12px 16px;
-      border-radius: 10px;
-      margin-bottom: 12px;
-      transition: 0.3s;
-    }
-
-    .skill:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(129,140,248,0.4);
-    }
-
-    /* Ripple effect */
-    .ripple {
+    /* ⭐ STAR ANIMATION */
+    .stars {
       position: fixed;
-      width: 10px;
-      height: 10px;
-      background: radial-gradient(circle, rgba(99,102,241,0.8), transparent);
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      animation: rippleAnim 0.8s ease-out forwards;
-      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: -1;
     }
 
-    .star {
-      position: fixed;
-      color: #818cf8;
-      font-size: 12px;
-      pointer-events: none;
-      animation: starAnim 1s ease-out forwards;
-      z-index: 9999;
+    .stars::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      box-shadow:
+        100px 200px white, 300px 400px white, 500px 100px white,
+        700px 600px white, 900px 300px white, 1100px 500px white,
+        1300px 200px white, 1500px 700px white;
+      animation: twinkle 5s infinite alternate;
     }
 
-    @keyframes rippleAnim {
-      from { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
-      to { opacity: 0; transform: translate(-50%, -50%) scale(15); }
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
     }
+  </style>
+</head>
 
-    @keyframes starAnim {
-      from { opacity: 1; transform: translate(0, 0) scale(1); }
-      to { opacity: 0; transform: translate(var(--x), var(--y)) scale(0); }
-    }
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white">
 
-  </style></head>
-<body>  <div class="card">
-    <h1>Prabhat Singh</h1><div class="info">
-  <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
-  <p><i class="fa-solid fa-envelope"></i> prabhat@email.com</p>
-  <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Available</p>
-</div>
+<div class="stars"></div>
 
-<div class="skills">
-  <h2>Skills</h2>
-  <div class="skill">HTML</div>
-  <div class="skill">CSS</div>
-  <div class="skill">JavaScript</div>
-  <div class="skill">Java</div>
-  <div class="skill">MySQL</div>
-  <div class="skill">Salesforce</div>
-</div>
+<!-- NAVBAR -->
+<nav class="fixed w-full bg-black/60 backdrop-blur-md z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-indigo-400">Prabhat.dev</h1>
+    <ul class="flex space-x-6 text-sm">
+      <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
+      <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+      <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
+      <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
+      <li><a href="#ai" class="hover:text-indigo-400">AI</a></li>
+      <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-  </div>  <script>
-    document.addEventListener("click", (e) => {
-      const ripple = document.createElement("div");
-      ripple.className = "ripple";
-      ripple.style.left = e.clientX + "px";
-      ripple.style.top = e.clientY + "px";
-      document.body.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 800);
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center justify-center px-6">
+  <div class="grid md:grid-cols-2 gap-10 items-center" data-aos="zoom-in">
 
-      for (let i = 0; i < 6; i++) {
-        const star = document.createElement("div");
-        star.className = "star";
-        star.innerText = "✦";
-        star.style.left = e.clientX + "px";
-        star.style.top = e.clientY + "px";
-        star.style.setProperty("--x", (Math.random() - 0.5) * 80 + "px");
-        star.style.setProperty("--y", (Math.random() - 0.5) * 80 + "px");
-        document.body.appendChild(star);
-        setTimeout(() => star.remove(), 1000);
-      }
-    });
-  </script></body>
+    <div>
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">
+        Hi, I'm <span class="text-indigo-400">Prabhat Singh</span>
+      </h1>
+      <p class="text-gray-300 text-lg mb-6">
+        Software Developer | Java | Spring Boot | AI Enthusiast
+      </p>
+      <div class="flex space-x-4">
+        <a href="#projects" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full glow">
+          Explore My Work 🚀
+        </a>
+        <a href="resume.pdf" download class="px-8 py-3 border border-indigo-500 rounded-full hover:bg-indigo-600">
+          Download Resume 📄
+        </a>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <img src="profile.jpg" alt="Prabhat Singh"
+        class="w-72 h-72 object-cover rounded-2xl border-4 border-indigo-500 glow" />
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 max-w-6xl mx-auto px-6" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 text-indigo-400">About Me</h2>
+  <p class="text-gray-300 leading-relaxed">
+    MCA candidate at IMS Ghaziabad, focused on backend engineering, scalable systems,
+    and AI-driven solutions using Java & Spring Boot.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 bg-black/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-10" data-aos="fade-right">
+      Skills
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-up">
+        <h3 class="text-xl font-semibold mb-2">Backend</h3>
+        <p class="text-gray-400">Java, Spring Boot, REST APIs, Hibernate</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-up">
+        <h3 class="text-xl font-semibold mb-2">Database & DevOps</h3>
+        <p class="text-gray-400">MySQL, Docker, AWS Basics</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-up">
+        <h3 class="text-xl font-semibold mb-2">Frontend & AI</h3>
+        <p class="text-gray-400">HTML, Tailwind CSS, JS, AI Integrations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-10" data-aos="fade-right">
+      Projects
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-left">
+        <h3 class="text-xl font-semibold mb-2">Smart Contact Manager</h3>
+        <p class="text-gray-400 text-sm">
+          Java, Spring Boot, MySQL, Docker-based full-stack system.
+        </p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-right">
+        <h3 class="text-xl font-semibold mb-2">AI Portfolio Website</h3>
+        <p class="text-gray-400 text-sm">
+          AI-powered interactive portfolio with chatbot & animations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI CHAT -->
+<section id="ai" class="py-20 max-w-6xl mx-auto px-6">
+  <div class="bg-gray-900 rounded-2xl p-8 glow" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-4">AI Assistant 🤖</h2>
+
+    <div class="bg-black rounded-xl p-4 h-60 overflow-y-auto mb-4" id="chatBox">
+      <p class="text-green-400">AI: Ask me about skills, projects, or hiring.</p>
+    </div>
+
+    <div class="flex">
+      <input id="userMsg" type="text"
+        class="flex-1 p-3 rounded-l bg-gray-800 text-white outline-none"
+        placeholder="Type your message..." />
+      <button onclick="chatAI()"
+        class="px-6 bg-indigo-600 rounded-r hover:bg-indigo-700">
+        Send
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-black/40 text-center">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-8">Connect With Me</h2>
+
+  <div class="flex justify-center space-x-12 text-4xl">
+    <a href="https://www.linkedin.com" target="_blank" class="hover:text-indigo-400">
+      <i class="fab fa-linkedin"></i>
+      <p class="text-sm mt-1">LinkedIn</p>
+    </a>
+
+    <a href="https://wa.me/918081084765" target="_blank" class="hover:text-green-400">
+      <i class="fab fa-whatsapp"></i>
+      <p class="text-sm mt-1">WhatsApp</p>
+    </a>
+
+    <a href="mailto:singh.prabhat1812@gmail.com" class="hover:text-red-400">
+      <i class="fas fa-envelope"></i>
+      <p class="text-sm mt-1">Email</p>
+    </a>
+  </div>
+</section>
+
+<footer class="py-6 text-center text-gray-500">
+  © 2026 Prabhat Singh | Built with ❤️ & AI
+</footer>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function chatAI() {
+    const input = document.getElementById("userMsg").value.toLowerCase();
+    const chatBox = document.getElementById("chatBox");
+
+    let reply = "🤖 Ask about skills, projects, or hiring.";
+
+    if (input.includes("skill")) reply = "💡 Java, Spring Boot, MySQL, Docker, AWS, AI basics.";
+    else if (input.includes("project")) reply = "🚀 Smart Contact Manager & AI Portfolio.";
+    else if (input.includes("hire")) reply = "🔥 Yes! Open for developer opportunities.";
+
+    chatBox.innerHTML += `<p class="text-indigo-400 mt-2">You: ${input}</p>`;
+    chatBox.innerHTML += `<p class="text-green-400">AI: ${reply}</p>`;
+    document.getElementById("userMsg").value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+</script>
+
+</body>
 </html>
+
+
 

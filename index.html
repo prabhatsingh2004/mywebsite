@@ -33,8 +33,7 @@
     <ul class="flex space-x-6 text-sm">
       <li><a href="#home" class="hover:text-indigo-400">Home</a></li>
       <li><a href="#about" class="hover:text-indigo-400">About</a></li>
-      <li><a href="#projects" class="hover:text-indigo-400">Projects</a></li>
-      <li><a href="#skills" class="hover:text-indigo-400">Skills</a></li>
+      <li><a href="#resume" class="hover:text-indigo-400">Resume</a></li>
       <li><a href="#ai" class="hover:text-indigo-400">AI</a></li>
       <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
     </ul>
@@ -51,9 +50,18 @@
       <p class="text-gray-300 mb-6">
         Software Developer | Java | Spring Boot | AI Enthusiast
       </p>
-      <a href="#projects" class="px-8 py-3 bg-indigo-600 rounded-full glow">
-        Explore My Work 🚀
-      </a>
+
+      <!-- Resume Button -->
+      <div class="flex gap-4">
+        <a href="#resume"
+           class="px-8 py-3 bg-indigo-600 rounded-full glow hover:bg-indigo-700">
+          View Resume 📄
+        </a>
+        <a href="resume.pdf" download
+           class="px-8 py-3 border border-indigo-500 rounded-full hover:bg-indigo-600">
+          Download Resume ⬇️
+        </a>
+      </div>
     </div>
 
     <div class="flex justify-center">
@@ -70,6 +78,20 @@
     MCA candidate from IMS Ghaziabad, passionate about Java, Spring Boot,
     scalable backend systems and AI-driven solutions.
   </p>
+</section>
+
+<!-- RESUME SECTION -->
+<section id="resume" class="py-20 bg-black/40 text-center" data-aos="zoom-in">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-6">My Resume</h2>
+  <p class="text-gray-300 mb-8">
+    Download my resume to know more about my skills, projects & experience.
+  </p>
+
+  <a href="resume.pdf" download
+     class="inline-flex items-center gap-3 px-10 py-4 bg-indigo-600 rounded-full text-lg glow hover:bg-indigo-700">
+    <i class="fas fa-download"></i>
+    Download Resume
+  </a>
 </section>
 
 <!-- AI CHATBOT -->
@@ -110,25 +132,21 @@
 <!-- FLOATING SOCIAL BUTTONS -->
 <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
 
-  <!-- WhatsApp -->
   <a href="https://wa.me/918081084765" target="_blank"
      class="bg-green-500 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Email -->
   <a href="mailto:singh.prabhat1812@gmail.com"
      class="bg-red-500 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
     <i class="fas fa-envelope"></i>
   </a>
 
-  <!-- LinkedIn (FIXED) -->
   <a href="https://www.linkedin.com/in/prabhat-singh-618072321"
      target="_blank"
      class="bg-blue-600 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
     <i class="fab fa-linkedin-in"></i>
   </a>
-
 </div>
 
 <!-- JS -->
@@ -161,6 +179,7 @@
 
 </body>
 </html>
+
 
 
 

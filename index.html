@@ -122,8 +122,8 @@
     <i class="fas fa-envelope"></i>
   </a>
 
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/your-linkedin-username"
+  <!-- LinkedIn (FIXED) -->
+  <a href="https://www.linkedin.com/in/prabhat-singh-618072321"
      target="_blank"
      class="bg-blue-600 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
     <i class="fab fa-linkedin-in"></i>
@@ -143,11 +143,11 @@
 
     let reply = "Ask me about skills, projects, or hiring.";
 
-    if (input.value.includes("project"))
+    if (input.value.toLowerCase().includes("project"))
       reply = "I build Java & Spring Boot based projects 🚀";
-    else if (input.value.includes("skill"))
+    else if (input.value.toLowerCase().includes("skill"))
       reply = "Java, Spring Boot, MySQL, Docker, AWS basics 💡";
-    else if (input.value.includes("hire"))
+    else if (input.value.toLowerCase().includes("hire"))
       reply = "Yes! I'm open to opportunities 🔥";
 
     chatBox.innerHTML += `
@@ -161,6 +161,7 @@
 
 </body>
 </html>
+
 
 
 

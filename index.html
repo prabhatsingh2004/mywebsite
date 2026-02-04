@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabhat Singh | AI Magic Portfolio</title>
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
@@ -44,115 +44,48 @@
 <!-- HERO -->
 <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-24">
   <div class="grid md:grid-cols-2 gap-10 items-center" data-aos="zoom-in">
-
     <div>
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">
+      <h1 class="text-5xl font-bold mb-4">
         Hi, I'm <span class="text-indigo-400">Prabhat Singh</span>
       </h1>
-      <p class="text-gray-300 text-lg mb-6">
+      <p class="text-gray-300 mb-6">
         Software Developer | Java | Spring Boot | AI Enthusiast
       </p>
-      <div class="flex space-x-4">
-        <a href="#projects" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full glow">
-          Explore My Work 🚀
-        </a>
-        <a href="resume.pdf" download
-           class="px-8 py-3 border border-indigo-500 rounded-full hover:bg-indigo-600">
-          Download Resume 📄
-        </a>
-      </div>
+      <a href="#projects" class="px-8 py-3 bg-indigo-600 rounded-full glow">
+        Explore My Work 🚀
+      </a>
     </div>
 
     <div class="flex justify-center">
-      <img src="profile.jpg" alt="Prabhat Singh"
-           class="w-72 h-72 object-cover rounded-2xl border-4 border-indigo-500 glow" />
+      <img src="profile.jpg"
+           class="w-72 h-72 rounded-2xl border-4 border-indigo-500 glow" />
     </div>
-
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20 max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl font-bold mb-6 text-indigo-400" data-aos="fade-up">About Me</h2>
-  <p class="text-gray-300 leading-relaxed" data-aos="fade-up">
-    MCA candidate from IMS Ghaziabad, passionate about backend engineering,
-    scalable systems, Java, Spring Boot, and AI-driven solutions.
+<section id="about" class="py-20 max-w-6xl mx-auto px-6" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-indigo-400 mb-4">About Me</h2>
+  <p class="text-gray-300">
+    MCA candidate from IMS Ghaziabad, passionate about Java, Spring Boot,
+    scalable backend systems and AI-driven solutions.
   </p>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-20 bg-black/40">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-indigo-400 mb-10" data-aos="fade-right">Projects</h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-left">
-        <h3 class="text-xl font-semibold mb-2">Smart Contact Manager</h3>
-        <p class="text-gray-400 text-sm">
-          Java, Spring Boot, MySQL, Docker based full-stack application.
-        </p>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-xl glow" data-aos="flip-right">
-        <h3 class="text-xl font-semibold mb-2">AI Portfolio Website</h3>
-        <p class="text-gray-400 text-sm">
-          AI-powered portfolio with chatbot and animations.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="py-20 max-w-6xl mx-auto px-6">
-  <h2 class="text-3xl font-bold text-indigo-400 mb-10" data-aos="fade-up">Skills</h2>
-
-  <div class="grid md:grid-cols-3 gap-8">
-    <div class="bg-gray-900 p-6 rounded-xl glow">
-      <h3 class="text-xl font-semibold mb-3">Backend</h3>
-      <ul class="text-gray-400 space-y-1">
-        <li>✔ Java</li>
-        <li>✔ Spring Boot</li>
-        <li>✔ REST APIs</li>
-        <li>✔ Hibernate / JPA</li>
-      </ul>
-    </div>
-
-    <div class="bg-gray-900 p-6 rounded-xl glow">
-      <h3 class="text-xl font-semibold mb-3">Database & DevOps</h3>
-      <ul class="text-gray-400 space-y-1">
-        <li>✔ MySQL</li>
-        <li>✔ Docker</li>
-        <li>✔ Git & GitHub</li>
-        <li>✔ AWS (Basics)</li>
-      </ul>
-    </div>
-
-    <div class="bg-gray-900 p-6 rounded-xl glow">
-      <h3 class="text-xl font-semibold mb-3">Frontend & AI</h3>
-      <ul class="text-gray-400 space-y-1">
-        <li>✔ HTML, CSS, JavaScript</li>
-        <li>✔ Tailwind CSS</li>
-        <li>✔ AI Chatbot Logic</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
 <!-- AI CHATBOT -->
 <section id="ai" class="py-20 max-w-6xl mx-auto px-6">
-  <div class="bg-gray-900 rounded-2xl p-8 glow" data-aos="zoom-in">
-    <h2 class="text-3xl font-bold text-indigo-400 mb-4">AI Assistant 🤖</h2>
+  <div class="bg-gray-900 p-8 rounded-2xl glow" data-aos="zoom-in">
+    <h2 class="text-3xl text-indigo-400 font-bold mb-4">AI Assistant 🤖</h2>
 
-    <div class="bg-black rounded-xl p-4 h-60 overflow-y-auto mb-4" id="chatBox">
-      <p class="text-green-400">AI: Hi! Ask me about Prabhat's skills, projects, or hiring.</p>
+    <div id="chatBox" class="bg-black h-60 p-4 rounded-xl overflow-y-auto mb-4">
+      <p class="text-green-400">AI: Hi! Ask me about skills, projects, or hiring.</p>
     </div>
 
     <div class="flex">
-      <input id="userMsg" type="text" placeholder="Type your message..."
-             class="flex-1 p-3 rounded-l bg-gray-800 text-white outline-none" />
-      <button onclick="chatAI()"
-              class="px-6 bg-indigo-600 rounded-r hover:bg-indigo-700">
+      <input id="userMsg"
+             class="flex-1 p-3 bg-gray-800 rounded-l outline-none"
+             placeholder="Type your message..." />
+      <button onclick="chatAI()" class="bg-indigo-600 px-6 rounded-r">
         Send
       </button>
     </div>
@@ -160,17 +93,13 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 bg-black/40">
-  <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
-    <h2 class="text-3xl font-bold text-indigo-400 mb-8">Connect With Me</h2>
-
-    <p>📞 Phone: <span class="text-indigo-400">+91 80810 84765</span></p>
-    <p>📧 Email:
-      <a href="mailto:singh.prabhat1812@gmail.com" class="text-indigo-400 hover:underline">
-        singh.prabhat1812@gmail.com
-      </a>
-    </p>
-  </div>
+<section id="contact" class="py-20 bg-black/40 text-center">
+  <h2 class="text-3xl text-indigo-400 font-bold mb-6">Connect With Me</h2>
+  <p>📞 +91 80810 84765</p>
+  <p>
+    📧 <a href="mailto:singh.prabhat1812@gmail.com"
+          class="text-indigo-400">singh.prabhat1812@gmail.com</a>
+  </p>
 </section>
 
 <!-- FOOTER -->
@@ -178,33 +107,54 @@
   © 2026 Prabhat Singh | Built with ❤️ & AI
 </footer>
 
+<!-- FLOATING SOCIAL BUTTONS -->
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/918081084765" target="_blank"
+     class="bg-green-500 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:singh.prabhat1812@gmail.com"
+     class="bg-red-500 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/your-linkedin-username"
+     target="_blank"
+     class="bg-blue-600 p-4 rounded-full text-white text-2xl shadow-lg hover:scale-110 transition">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+</div>
+
 <!-- JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
 
   function chatAI() {
-    const inputBox = document.getElementById("userMsg");
-    const input = inputBox.value.toLowerCase();
+    const input = document.getElementById("userMsg");
     const chatBox = document.getElementById("chatBox");
+    if (!input.value.trim()) return;
 
-    if (input.trim() === "") return;
+    let reply = "Ask me about skills, projects, or hiring.";
 
-    let reply = "🤖 Ask me about skills, projects, or hiring.";
-
-    if (input.includes("project"))
-      reply = "🚀 I build Java & Spring Boot based projects.";
-    else if (input.includes("skill"))
-      reply = "💡 Java, Spring Boot, MySQL, Docker, AI basics.";
-    else if (input.includes("hire"))
-      reply = "🔥 Yes, I'm open to exciting opportunities!";
+    if (input.value.includes("project"))
+      reply = "I build Java & Spring Boot based projects 🚀";
+    else if (input.value.includes("skill"))
+      reply = "Java, Spring Boot, MySQL, Docker, AWS basics 💡";
+    else if (input.value.includes("hire"))
+      reply = "Yes! I'm open to opportunities 🔥";
 
     chatBox.innerHTML += `
-      <p class="text-blue-400">You: ${input}</p>
+      <p class="text-blue-400">You: ${input.value}</p>
       <p class="text-green-400">AI: ${reply}</p>
     `;
-
-    inputBox.value = "";
+    input.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
   }
 </script>
